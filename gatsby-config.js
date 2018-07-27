@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Liduše píše',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -19,7 +19,8 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-sharp',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -36,7 +37,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {

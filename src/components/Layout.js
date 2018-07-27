@@ -6,7 +6,7 @@ import '../styles/index.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Liduše píše" />
     <Navbar />
     <div>{children}</div>
   </div>

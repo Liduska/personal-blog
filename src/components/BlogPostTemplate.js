@@ -9,6 +9,7 @@ const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
+  date,
   tags,
   title,
   helmet,
@@ -16,26 +17,37 @@ const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="container max-w-xl mx-auto px-4 py-8 md:mt-8">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+      <div className="">
+        <div className="">
+          <div className="">
+            <h1 className="text-grey-darkest text-4xl font-semibold mb-4 inline-block">
               {title}
             </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
+            <small className="block text-grey mb-8">{date}</small>
+            <p className="my-4 leading-loose font-semibold text-grey-darkest">
+              {description}
+            </p>
+            <PostContent content={content} className="content" />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div className="mt-4">
                 <h4>Tags</h4>
-                <ul className="taglist">
+                <div className="pt-2">
                   {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
+                    <span
+                      key={tag + `tag`}
+                      className="bg-grey-lighter px-1 mx-1 text-sm rounded hover:bg-grey-darker"
+                    >
+                      <Link
+                        to={`/tags/${kebabCase(tag)}/`}
+                        className="no-underline text-black hover:text-white"
+                      >
+                        {tag}
+                      </Link>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             ) : null}
           </div>

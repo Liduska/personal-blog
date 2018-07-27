@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import PostCardHomepage from '../components/PostCardHomepage'
+import PostCard from '../components/PostCard'
 
-export default class IndexPage extends React.Component {
+export default class BlogPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -12,9 +12,9 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="container mx-auto">
-          <div className="flex">
+          <div className="">
             {posts.map(({ node: post }) => (
-              <PostCardHomepage key={post.id} post={post} />
+              <PostCard key={post.id} post={post} />
             ))}
           </div>
         </section>
@@ -23,7 +23,7 @@ export default class IndexPage extends React.Component {
   }
 }
 
-IndexPage.propTypes = {
+BlogPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -32,11 +32,10 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-      limit: 3
     ) {
       edges {
         node {

@@ -1,0 +1,66 @@
+.content {
+    @apply .block;
+    @apply .font-sans;
+    @apply .font-normal;
+    @apply .leading-loose;
+    @apply .text-justify;
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply .font-bold;
+        @apply .mb-2;
+        @apply .mt-4;
+        @apply .text-grey-darkest;
+    }
+
+    h1 { @apply .text-3xl; }
+    h2 { @apply .text-2xl; }
+    h3 { @apply .text-xl; }
+    h4 { @apply .text-lg; }
+    h5 { @apply .text-base; }
+    h6 { @apply .text-sm; }
+
+    a {
+        @apply
+            .no-underline
+            .text-blue-dark
+            .transition-linear;
+
+        &:hover {
+            @apply
+                .underline
+                .text-blue-darker;
+        }
+    }
+
+    img {
+        @apply
+            .block
+            .rounded;
+    }
+
+    blockquote {
+        @apply
+            .bg-grey-lightest
+            .border-l-4
+            .border-grey-light
+            .italic
+            .px-4
+            .py-2;
+    }
+
+    p > code {
+        @apply
+            .bg-grey-lighter
+            .px-1
+            .text-sm
+            .rounded;
+    }
+
+    & > p,
+    & > ul,
+    & > ol,
+    & > blockquote {
+        @apply .mt-2 .mb-2;
+        @apply .text-base;
+    }
+}
