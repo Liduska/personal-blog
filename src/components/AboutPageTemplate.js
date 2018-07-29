@@ -1,21 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 import Content from './Content'
 
-const AboutPageTemplate = ({ title, content, contentComponent }) => {
+const AboutPageTemplate = ({ title, image, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+    <section className="container mx-auto">
+      <div class="mx-auto w-full max-w-xl mt-8">
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <Img sizes={image} />
+          </div>
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <h1>{title}</h1>
+            <PageContent className="content" content={content} />
           </div>
         </div>
       </div>

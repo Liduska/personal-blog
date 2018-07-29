@@ -28,7 +28,6 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Full image", name: "full_image", widget: "image"}
+          - {label: "Full image", name: "image", widget: "image"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}

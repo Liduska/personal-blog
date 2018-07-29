@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import AboutPageTemplate from '../components/AboutPageTemplate'
-import Content, { HTMLContent } from '../components/Content'
+import { HTMLContent } from '../components/Content'
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
@@ -13,6 +13,7 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        image={post.frontmatter.cover_image.childImageSharp.sizes}
         content={post.html}
       />
     </Layout>
@@ -31,6 +32,13 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        cover_image {
+          childImageSharp {
+            sizes(maxWidth: 630) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }

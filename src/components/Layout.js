@@ -11,7 +11,13 @@ const TemplateWrapper = ({ children }) => (
     <div>{children}</div>
     <footer className="relative mt-10 pt-10 bg-black text-white text-center">
       <h2 className="">Liduše píše</h2>
-      <form name="subscription" data-netlify="true" class="flex flex-col mb-3">
+      <form
+        name="subscription"
+        method="post"
+        data-netlify="true"
+        class="flex flex-col mb-3"
+      >
+        <input type="hidden" name="form-name" value="subscription" />
         <div class="flex flex-col self-center my-5">
           <div className="flex">
             <input
@@ -28,7 +34,7 @@ const TemplateWrapper = ({ children }) => (
             </button>
           </div>
           <label class="block my-2">
-            <input class="mr-2 leading-tight" type="checkbox" />
+            <input name="terms" class="mr-2 leading-tight" type="checkbox" />
             <span class="text-sm">
               Tohle je GDPR čtvereček. Prosím, zaškrtni jej, jinak zítra nevyjde
               slunce.
