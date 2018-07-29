@@ -65,3 +65,15 @@
  .transition-linear {
     transition: .1s all linear;
 }
+
+.gatsby-bg-image {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  & > img {
+    object-fit: cover !important;
+    object-position: 0% 0% !important;
+  }
+}

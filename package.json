@@ -6,6 +6,7 @@
   "dependencies": {
     "autoprefixer": "^9.0.1",
     "gatsby": "next",
+    "gatsby-image": "^1.0.55",
     "gatsby-plugin-netlify": "next",
     "gatsby-plugin-netlify-cms": "next",
     "gatsby-plugin-postcss": "^1.0.0",
@@ -13,6 +14,7 @@
     "gatsby-plugin-sass": "next",
     "gatsby-plugin-sharp": "next",
     "gatsby-remark-images": "^2.0.1-beta.9",
+    "gatsby-remark-relative-images": "git+https://github.com/stlk/gatsby-remark-relative-images.git",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",

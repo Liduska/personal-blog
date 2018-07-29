@@ -48,7 +48,13 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
-            cover_image
+            cover_image {
+              childImageSharp {
+                sizes(maxWidth: 630) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

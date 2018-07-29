@@ -71,7 +71,7 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+const createNodeFieldMarkdownRemark = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
@@ -82,4 +82,25 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+const mapNetlifyMediaPath = ({ node }) => {
+  const { frontmatter } = node
+  if (frontmatter) {
+    const { cover_image } = frontmatter
+
+    if (cover_image) {
+      if (cover_image.indexOf('/img') === 0) {
+        frontmatter.cover_image = path.relative(
+          path.dirname(node.fileAbsolutePath),
+          path.join(__dirname, '/static/', cover_image)
+        )
+      }
+    }
+  }
+}
+
+exports.onCreateNode = node => {
+  mapNetlifyMediaPath(node)
+  createNodeFieldMarkdownRemark(node)
 }
