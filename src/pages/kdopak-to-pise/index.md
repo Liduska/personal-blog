@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-image: /img/chemex.jpg
+cover_image: /img/chemex.jpg
 title: About our values
 ---
 ### Shade-grown coffee
