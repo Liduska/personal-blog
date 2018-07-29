@@ -11,7 +11,7 @@ const AboutPageTemplate = ({ title, image, content, contentComponent }) => {
       <div class="mx-auto w-full max-w-xl mt-8">
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <Img sizes={image} />
+            {image ? <Img sizes={image} /> : null}
           </div>
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <h1>{title}</h1>
