@@ -17,6 +17,14 @@ export default class IndexPage extends React.Component {
               <PostCardHomepage key={post.id} post={post} />
             ))}
           </div>
+          <div className="text-center">
+            <Link
+              to="/blog"
+              className="no-underline inline-block border text-black py-4 px-12 my-10"
+            >
+              Všechny příběhy
+            </Link>
+          </div>
         </section>
       </Layout>
     )
