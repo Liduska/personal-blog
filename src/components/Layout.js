@@ -6,7 +6,10 @@ import '../styles/index.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Liduše píše" />
+    <Helmet defaultTitle="Liduše píše" titleTemplate="%s - Liduše píše">
+      <html lang="cs" />
+      <body className="font-serif text-lg" />
+    </Helmet>
     <Navbar />
     <div>{children}</div>
     <footer className="relative mt-10 pt-10 bg-black text-white text-center">
