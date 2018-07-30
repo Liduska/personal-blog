@@ -62,7 +62,12 @@
  * @import "utilities/skew-transforms";
  */
 
- .transition-linear {
+body {
+  -webkit-text-size-adjust: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.transition-linear {
     transition: .1s all linear;
 }
 

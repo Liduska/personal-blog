@@ -9,6 +9,13 @@ import { HTMLContent } from '../components/Content'
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
+  const helmet = (
+    <Helmet title={post.frontmatter.title}>
+      <meta name="description" content={post.frontmatter.description} />
+      <meta property="og:type" content="article" />
+    </Helmet>
+  )
+
   return (
     <Layout>
       <BlogPostTemplate
@@ -16,9 +23,10 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         date={post.frontmatter.date}
-        helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
+        helmet={helmet}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        image={post.frontmatter.cover_image.childImageSharp.sizes}
       />
     </Layout>
   )
@@ -42,6 +50,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        cover_image {
+          childImageSharp {
+            sizes(maxWidth: 930) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }

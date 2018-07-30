@@ -9,6 +9,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet defaultTitle="Liduše píše" titleTemplate="%s - Liduše píše">
       <html lang="cs" />
       <body className="font-serif text-lg" />
+      <meta name="description" content="Blog Lidmily Maršálkové" />
     </Helmet>
     <Navbar />
     <div>{children}</div>

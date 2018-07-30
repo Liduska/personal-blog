@@ -22,7 +22,9 @@ const PostCard = ({ post }) => (
         <div className="text-black font-bold text-xl mb-2">
           {post.frontmatter.title}
         </div>
-        <p className="text-grey-darker text-base">{post.excerpt}</p>
+        <p className="text-grey-darker text-base">
+          {post.frontmatter.description}
+        </p>
       </div>
     </div>
   </Link>

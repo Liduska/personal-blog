@@ -1,7 +1,5 @@
 .content {
     @apply .block;
-    @apply .font-sans;
-    @apply .font-normal;
     @apply .leading-loose;
     @apply .text-justify;
 
@@ -61,6 +59,5 @@
     & > ol,
     & > blockquote {
         @apply .mt-2 .mb-2;
-        @apply .text-base;
     }
 }

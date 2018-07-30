@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import Content from './Content'
 
 const BlogPostTemplate = ({
@@ -13,6 +14,7 @@ const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  image,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -29,6 +31,7 @@ const BlogPostTemplate = ({
             <p className="my-4 leading-loose font-semibold text-grey-darkest">
               {description}
             </p>
+            {image ? <Img sizes={image} /> : null}
             <PostContent content={content} className="content" />
             {tags && tags.length ? (
               <div className="mt-4">
