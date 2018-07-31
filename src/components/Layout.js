@@ -23,9 +23,9 @@ const TemplateWrapper = ({ children }) => (
       >
         <input type="hidden" name="form-name" value="subscription" />
         <div class="flex flex-col self-center my-5">
-          <div className="flex">
+          <div className="sm:flex">
             <input
-              class="appearance-none w-full text-grey-darker border border-grey-dark py-3 px-4 mr-4 leading-tight"
+              class="appearance-none sm:w-full text-grey-darker border border-grey-dark py-3 px-4 mr-4 mb-4 sm:mb-0 leading-tight"
               type="email"
               name="email"
               placeholder="Chci vědět, co Liduše píše"

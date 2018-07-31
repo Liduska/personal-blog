@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="container mx-auto">
-          <div className="flex">
+          <div className="sm:flex">
             {posts.map(({ node: post }) => (
               <PostCardHomepage key={post.id} post={post} />
             ))}

@@ -47,6 +47,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            description
             date(formatString: "MMMM DD, YYYY")
             cover_image {
               childImageSharp {
