@@ -1,0 +1,15 @@
+.homepage__post-card {
+    @apply .h-64 .flex .flex-col-reverse .bg-semi-transparent .transition-linear;
+
+    &:hover {
+        @apply .bg-transparent;
+        & > div {
+            transform: translateY(150%);
+        }
+    }
+
+    & > div {
+        @apply .transition-linear;
+
+    }
+}

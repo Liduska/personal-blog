@@ -8,12 +8,9 @@ const PostCard = ({ post }) => (
       sizes={post.frontmatter.cover_image.childImageSharp.sizes}
       className="h-64 w-full gatsby-bg-image"
     />
-    <div
-      className="h-64 flex flex-col-reverse"
-      style={{ backgroundColor: 'rgba(0,0,0,0.35)' }}
-    >
+    <div className="homepage__post-card">
       <div className="m-4 text-white">
-        <div className="font-serif text-white text-xl font-thin mb-4 pb-4 border-b border-white">
+        <div className="font-serif text-xl font-thin mb-4 pb-4 border-b border-white">
           {post.frontmatter.title}
         </div>
         <p className="text-sm">{post.frontmatter.date}</p>
