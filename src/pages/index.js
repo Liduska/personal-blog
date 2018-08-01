@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="container mx-auto">
-          <div className="sm:flex">
+          <div className="sm:flex -mx-4">
             {posts.map(({ node: post }) => (
               <PostCardHomepage key={post.id} post={post} />
             ))}
@@ -20,7 +20,7 @@ export default class IndexPage extends React.Component {
           <div className="text-center">
             <Link
               to="/blog"
-              className="no-underline inline-block border text-black py-4 px-12 my-10"
+              className="no-underline inline-block border text-black py-4 px-12 my-10 transition-linear hover:bg-black hover:text-white"
             >
               Všechny příběhy
             </Link>

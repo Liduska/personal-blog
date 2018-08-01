@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
     </Helmet>
     <Navbar />
     <div>{children}</div>
-    <footer className="relative mt-10 pt-10 bg-black text-white text-center">
+    <footer className="relative mt-10 pt-10 bg-grey-darkest text-white text-center">
       <h2 className="">Liduše píše</h2>
       <form
         name="subscription"
@@ -36,7 +36,7 @@ const TemplateWrapper = ({ children }) => (
             />
             <button
               type="submit"
-              className="border border-white text-white p-2"
+              className="border border-white text-white p-2 transition-linear hover:bg-white hover:text-black"
             >
               Přihlásit&nbsp;odběr
             </button>
