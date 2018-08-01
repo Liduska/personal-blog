@@ -7,6 +7,4 @@ Liduše píše je prostě blog. Můj pátý blog. Můj pátý pokus alespoň o n
 
 Jsem copywriterka na volné noze. Bývalá úřednice, asistentka i majitelka kavárny. Někdy zapomínám kolik mi je a pořád si myslím, že mám dost pokusů vrátit se na startovní čáru a zkusit to znovu.
 
-Budu se snažit, aby tento blog přinesl něco užitečného, vtipného, nějaký ten AHA moment. Aby vyjadřoval můj obdiv k lidem, které mám poblíž a úctu ke zkušenostem, které ze mě tesají takovou Lídu, jakou jsem.
-
-Kdyby vás cokoliv nadchlo, pohoršilo i rozesmálo, budu moc ráda, když mi to napíšete.
+Budu se snažit, aby tento blog přinesl něco užitečného, vtipného, nějaký ten AHA moment. Kdyby vás cokoliv nadchlo, pohoršilo i rozesmálo, budu moc ráda, když mi to napíšete.
