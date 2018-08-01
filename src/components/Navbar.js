@@ -15,7 +15,7 @@ const Navbar = () => (
       <ul className="list-reset flex flex-col md:flex-row justify-center items-center py-4">
         <li className="mx-2 mb-2 md:mb-0">
           <a
-            className="no-underline text-white text-sm font-normal font-bold antialiased hover:text-primary-dark uppercase transition-linear"
+            className="no-underline text-white text-sm font-normal font-bold antialiased hover:text-blue-lightest uppercase transition-linear"
             href="/blog"
           >
             blog
@@ -23,7 +23,7 @@ const Navbar = () => (
         </li>
         <li className="mx-2 mb-2 md:mb-0">
           <a
-            className="no-underline text-white text-sm font-normal font-bold antialiased hover:text-primary-dark uppercase transition-linear"
+            className="no-underline text-white text-sm font-normal font-bold antialiased hover:text-blue-lightest uppercase transition-linear"
             href="/kdopak-to-pise"
           >
             kdopak to píše

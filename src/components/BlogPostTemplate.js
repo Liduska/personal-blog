@@ -31,7 +31,9 @@ const BlogPostTemplate = ({
             <p className="my-4 leading-loose font-semibold text-grey-darkest">
               {description}
             </p>
-            {image ? <Img sizes={image} /> : null}
+            <div className="mx-auto max-w-md py-6">
+              {image ? <Img sizes={image} /> : null}
+            </div>
             <PostContent content={content} className="content" />
             {tags && tags.length ? (
               <div className="mt-4">

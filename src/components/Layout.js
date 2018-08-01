@@ -10,6 +10,10 @@ const TemplateWrapper = ({ children }) => (
       <html lang="cs" />
       <body className="font-serif text-lg" />
       <meta name="description" content="Blog Lidmily Maršálkové" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Caveat&amp;subset=latin-ext"
+        rel="stylesheet"
+      />
     </Helmet>
     <Navbar />
     <div>{children}</div>
