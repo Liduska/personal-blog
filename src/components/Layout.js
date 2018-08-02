@@ -26,10 +26,10 @@ const TemplateWrapper = ({ children }) => (
         className="flex flex-col mb-3"
       >
         <input type="hidden" name="form-name" value="subscription" />
-        <div className="flex flex-col self-center my-5">
+        <div className="flex flex-col self-center my-5 text-sm">
           <div className="sm:flex">
             <input
-              className="appearance-none sm:w-full text-grey-darker border border-grey-dark py-3 px-4 mr-4 mb-4 sm:mb-0 leading-tight"
+              className="appearance-none sm:w-full text-grey-darker border border-grey-dark py-2 px-4 mr-4 mb-4 sm:mb-0 leading-tight"
               type="email"
               name="email"
               placeholder="Chci vědět, co Liduše píše"
@@ -48,8 +48,7 @@ const TemplateWrapper = ({ children }) => (
               type="checkbox"
             />
             <span className="text-sm">
-              Tohle je GDPR čtvereček. Prosím, zaškrtni jej, jinak zítra nevyjde
-              slunce.
+              Pokud se na lidusepise.cz objeví nový článek, chci o tom vědět.
             </span>
           </label>
         </div>

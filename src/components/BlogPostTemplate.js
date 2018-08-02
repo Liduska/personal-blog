@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import Content from './Content'
 
 const BlogPostTemplate = ({
