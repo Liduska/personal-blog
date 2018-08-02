@@ -5,6 +5,7 @@
   "author": "Josef Rousek",
   "dependencies": {
     "autoprefixer": "^9.0.1",
+    "cssnano": "^4.0.5",
     "gatsby": "next",
     "gatsby-image": "next",
     "gatsby-plugin-netlify": "next",
@@ -23,6 +24,7 @@
     "netlify-cms": "^1.9.3",
     "parcel-bundler": "^1.9.4",
     "postcss-import": "^11.1.0",
+    "postcss-preset-env": "^5.3.0",
     "precss": "^3.1.2",
     "prop-types": "^15.6.0",
     "purgecss-webpack-plugin": "^1.2.0",
