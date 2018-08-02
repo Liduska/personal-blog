@@ -8,7 +8,7 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet defaultTitle="Liduše píše" titleTemplate="%s - Liduše píše">
       <html lang="cs" />
-      <body className="font-serif text-lg" />
+      <body className="font-serif md:text-lg" />
       <meta name="description" content="Blog Lidmily Maršálkové" />
       <link
         href="https://fonts.googleapis.com/css?family=Caveat&amp;subset=latin-ext"

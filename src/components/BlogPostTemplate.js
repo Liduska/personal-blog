@@ -21,43 +21,30 @@ const BlogPostTemplate = ({
   return (
     <section className="container max-w-xl mx-auto px-4 py-8 md:mt-8">
       {helmet || ''}
-      <div className="">
-        <div className="">
-          <div className="">
-            <h1 className="text-grey-darkest text-4xl font-semibold mb-4 inline-block">
-              {title}
-            </h1>
-            <small className="block text-grey mb-8">{date}</small>
-            <p className="my-4 leading-loose font-semibold text-grey-darkest">
-              {description}
-            </p>
-            <div className="mx-auto max-w-md py-6">
-              {image ? <Img sizes={image} /> : null}
-            </div>
-            <PostContent content={content} className="content" />
-            {tags && tags.length ? (
-              <div className="mt-4">
-                <h4>Tags</h4>
-                <div className="pt-2">
-                  {tags.map(tag => (
-                    <span
-                      key={tag + `tag`}
-                      className="bg-grey-lighter px-1 mx-1 text-sm rounded hover:bg-grey-darker"
-                    >
-                      <Link
-                        to={`/tags/${kebabCase(tag)}/`}
-                        className="no-underline text-black hover:text-white"
-                      >
-                        {tag}
-                      </Link>
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-          </div>
-        </div>
+      <h1 className="text-grey-darkest text-4xl font-semibold mb-4 inline-block">
+        {title}
+      </h1>
+      <div>
+        <small className="text-grey mb-8 mr-3">{date}</small>
+        {tags && tags.length
+          ? tags.map(tag => (
+              <Link
+                key={tag + `tag`}
+                to={`/tags/${kebabCase(tag)}/`}
+                className="no-underline inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm text-grey-darker mr-2 rounded hover:bg-grey-darker hover:text-white"
+              >
+                {tag}
+              </Link>
+            ))
+          : null}
       </div>
+      <p className="my-4 leading-loose font-semibold text-grey-darkest">
+        {description}
+      </p>
+      <div className="mx-auto max-w-md py-6">
+        {image ? <Img sizes={image} /> : null}
+      </div>
+      <PostContent content={content} className="content" />
     </section>
   )
 }

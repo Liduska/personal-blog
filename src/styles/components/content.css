@@ -8,6 +8,7 @@
         @apply .mb-2;
         @apply .mt-4;
         @apply .text-grey-darkest;
+        @apply .text-left;
     }
 
     h1 { @apply .text-3xl; }
