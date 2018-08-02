@@ -36,6 +36,7 @@
  * @import "components/forms";
  */
  @import "components/content";
+ @import "components/about";
  @import "components/homepage-post-card";
 
 /**

@@ -1,0 +1,46 @@
+
+.about-image {
+    @apply .w-full .px-3 .mb-6 .flex-none;
+
+    @screen md {
+        @apply .mb-0 .mr-8;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.about {
+    @apply .block;
+    @apply .leading-normal;
+    @apply .text-sm;
+    @apply .text-justify;
+
+    a {
+        @apply
+            .no-underline
+            .text-blue-dark
+            .transition-linear;
+
+        &:hover {
+            @apply
+                .underline
+                .text-blue-darker;
+        }
+    }
+
+    & > p,
+    & > ul,
+    & > ol,
+    & > blockquote {
+        @apply .my-8;
+    }
+
+    & > p:last-child {
+        @apply .mb-0;
+    }
+
+}
+
+.contact-form-input {
+    @apply .appearance-none .block .w-full .text-grey-darker .border-b .border-grey-dark .py-3 .mb-3 .leading-tight;
+}

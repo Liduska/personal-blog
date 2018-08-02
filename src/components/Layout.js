@@ -23,13 +23,13 @@ const TemplateWrapper = ({ children }) => (
         name="subscription"
         method="post"
         data-netlify="true"
-        class="flex flex-col mb-3"
+        className="flex flex-col mb-3"
       >
         <input type="hidden" name="form-name" value="subscription" />
-        <div class="flex flex-col self-center my-5">
+        <div className="flex flex-col self-center my-5">
           <div className="sm:flex">
             <input
-              class="appearance-none sm:w-full text-grey-darker border border-grey-dark py-3 px-4 mr-4 mb-4 sm:mb-0 leading-tight"
+              className="appearance-none sm:w-full text-grey-darker border border-grey-dark py-3 px-4 mr-4 mb-4 sm:mb-0 leading-tight"
               type="email"
               name="email"
               placeholder="Chci vědět, co Liduše píše"
@@ -41,9 +41,13 @@ const TemplateWrapper = ({ children }) => (
               Přihlásit&nbsp;odběr
             </button>
           </div>
-          <label class="block my-2">
-            <input name="terms" class="mr-2 leading-tight" type="checkbox" />
-            <span class="text-sm">
+          <label className="block my-2">
+            <input
+              name="terms"
+              className="mr-2 leading-tight"
+              type="checkbox"
+            />
+            <span className="text-sm">
               Tohle je GDPR čtvereček. Prosím, zaškrtni jej, jinak zítra nevyjde
               slunce.
             </span>
