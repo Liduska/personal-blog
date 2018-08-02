@@ -1,5 +1,5 @@
 .homepage__post-card {
-    @apply .h-64 .flex .flex-col-reverse .bg-semi-transparent .transition-linear;
+    @apply .h-72 .flex .flex-col-reverse .bg-semi-transparent .transition-linear .overflow-hidden;
 
     &:hover {
         @apply .bg-transparent;

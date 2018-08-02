@@ -24,6 +24,7 @@ const Navbar = () => (
     </div>
     <nav className="relative mx-auto container flex flex-col items-center justify-center text-center z-10 border-t border-b">
       <ul className="list-reset flex flex-col md:flex-row justify-center items-center py-4">
+        <NavItem to="/">homepage</NavItem>
         <NavItem to="/blog">blog</NavItem>
         <NavItem to="/kdopak-to-pise">kdopak to píše</NavItem>
       </ul>

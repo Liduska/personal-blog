@@ -3,10 +3,13 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 const PostCard = ({ post }) => (
-  <Link to={post.fields.slug} className="block no-underline h-64 sm:w-1/3 m-4">
+  <Link
+    to={post.fields.slug}
+    className="block no-underline h-72 w-72 my-4 sm:m-4"
+  >
     <Img
       sizes={post.frontmatter.cover_image.childImageSharp.sizes}
-      className="h-64 w-full gatsby-bg-image"
+      className="h-72 w-full gatsby-bg-image"
     />
     <div className="homepage__post-card">
       <div className="m-4 text-white">
