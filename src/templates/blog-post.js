@@ -12,7 +12,12 @@ const BlogPost = ({ data }) => {
   const helmet = (
     <Helmet title={post.frontmatter.title}>
       <meta name="description" content={post.frontmatter.description} />
+      <meta property="og:description" content={post.frontmatter.description} />
       <meta property="og:type" content="article" />
+      <meta
+        property="og:image"
+        content={post.frontmatter.cover_image.childImageSharp.fluid.src}
+      />
     </Helmet>
   )
 
@@ -52,8 +57,8 @@ export const pageQuery = graphql`
         tags
         cover_image {
           childImageSharp {
-            sizes(maxWidth: 930) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 1900) {
+              src
             }
           }
         }

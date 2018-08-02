@@ -14,12 +14,11 @@ const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  image,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="container max-w-xl mx-auto px-4 py-8 md:mt-8">
+    <section className="container max-w-lg mx-auto p-4 md:p-16 md:mt-16 md:border">
       {helmet || ''}
       <h1 className="text-grey-darkest text-4xl font-semibold mb-4 inline-block">
         {title}
@@ -38,12 +37,9 @@ const BlogPostTemplate = ({
             ))
           : null}
       </div>
-      <p className="my-4 leading-loose font-semibold text-grey-darkest">
+      <p className="mt-12 mb-8 leading-loose font-semibold text-grey-darkest">
         {description}
       </p>
-      <div className="mx-auto max-w-md py-6">
-        {image ? <Img sizes={image} /> : null}
-      </div>
       <PostContent content={content} className="content" />
     </section>
   )
