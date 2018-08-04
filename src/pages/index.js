@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostCardHomepage from '../components/PostCardHomepage'
+import Instagram from '../components/Instagram'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -25,6 +26,8 @@ export default class IndexPage extends React.Component {
               Všechny příběhy
             </Link>
           </div>
+          <h2 className="text-center my-8">Instagram</h2>
+          <Instagram />
         </section>
       </Layout>
     )

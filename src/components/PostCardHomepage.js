@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 const PostCard = ({ post }) => (
   <Link
     to={post.fields.slug}
-    className="block no-underline h-72 w-72 my-4 sm:m-4"
+    className="block no-underline h-72 w-72 my-4 mx-auto sm:m-4"
   >
     <Img
       sizes={post.frontmatter.cover_image.childImageSharp.sizes}
