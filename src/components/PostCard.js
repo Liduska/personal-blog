@@ -10,7 +10,7 @@ const PostCard = ({ post }) => (
   >
     <div className="h-48 lg:h-72 lg:w-96 flex-none bg-cover bg-center text-center overflow-hidden">
       <Img
-        sizes={post.frontmatter.cover_image.childImageSharp.sizes}
+        fluid={post.frontmatter.cover_image.childImageSharp.fluid}
         outerWrapperClassName="h-full"
         className="h-72 w-full gatsby-bg-image"
       />

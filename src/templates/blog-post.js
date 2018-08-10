@@ -31,7 +31,7 @@ const BlogPost = ({ data }) => {
         helmet={helmet}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        image={post.frontmatter.cover_image.childImageSharp.sizes}
+        image={post.frontmatter.cover_image.childImageSharp.fluid}
       />
     </Layout>
   )

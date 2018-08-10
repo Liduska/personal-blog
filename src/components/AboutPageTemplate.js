@@ -13,7 +13,7 @@ const AboutPageTemplate = ({ title, image, content, contentComponent }) => {
           <div className="about-image">
             {image ? (
               <Img
-                sizes={image}
+                fluid={image}
                 outerWrapperClassName="h-full"
                 className="h-full"
               />

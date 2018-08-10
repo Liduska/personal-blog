@@ -100,7 +100,7 @@ const mapNetlifyMediaPath = ({ node }) => {
   }
 }
 
-exports.onCreateNode = node => {
-  mapNetlifyMediaPath(node)
-  createNodeFieldMarkdownRemark(node)
+exports.onCreateNode = nodeContext => {
+  mapNetlifyMediaPath(nodeContext)
+  createNodeFieldMarkdownRemark(nodeContext)
 }

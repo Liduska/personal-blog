@@ -8,7 +8,7 @@ const PostCard = ({ post }) => (
     className="block no-underline h-72 w-72 my-4 mx-auto sm:m-4"
   >
     <Img
-      sizes={post.frontmatter.cover_image.childImageSharp.sizes}
+      fluid={post.frontmatter.cover_image.childImageSharp.fluid}
       className="h-72 w-full gatsby-bg-image"
     />
     <div className="homepage__post-card">

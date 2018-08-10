@@ -13,7 +13,7 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        image={post.frontmatter.cover_image.childImageSharp.sizes}
+        image={post.frontmatter.cover_image.childImageSharp.fluid}
         content={post.html}
       />
     </Layout>
@@ -34,8 +34,8 @@ export const aboutPageQuery = graphql`
         title
         cover_image {
           childImageSharp {
-            sizes(maxWidth: 630) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 630) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

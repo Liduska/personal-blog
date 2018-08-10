@@ -43,7 +43,7 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -62,8 +62,8 @@ export const pageQuery = graphql`
             date(formatString: "D. MMMM YYYY", locale: "cs")
             cover_image {
               childImageSharp {
-                sizes(maxWidth: 630) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 630) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

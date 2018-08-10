@@ -56,8 +56,8 @@ export const tagPageQuery = graphql`
             date(formatString: "D. MMMM YYYY", locale: "cs")
             cover_image {
               childImageSharp {
-                sizes(maxWidth: 900) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 900) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
