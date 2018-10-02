@@ -1,3 +1,10 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Liduše píše',
@@ -19,13 +26,14 @@ module.exports = {
         name: 'images',
       },
     },
+    netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
+          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
           {
             resolve: `gatsby-remark-images`,
             options: {

@@ -84,23 +84,6 @@ const createNodeFieldMarkdownRemark = ({ node, actions, getNode }) => {
   }
 }
 
-const mapNetlifyMediaPath = ({ node }) => {
-  const { frontmatter } = node
-  if (frontmatter) {
-    const { cover_image } = frontmatter
-
-    if (cover_image) {
-      if (cover_image.indexOf('/img') === 0) {
-        frontmatter.cover_image = path.relative(
-          path.dirname(node.fileAbsolutePath),
-          path.join(__dirname, '/static/', cover_image)
-        )
-      }
-    }
-  }
-}
-
 exports.onCreateNode = nodeContext => {
-  mapNetlifyMediaPath(nodeContext)
   createNodeFieldMarkdownRemark(nodeContext)
 }
