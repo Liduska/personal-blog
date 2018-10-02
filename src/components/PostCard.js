@@ -8,10 +8,9 @@ const PostCard = ({ post }) => (
     to={post.fields.slug}
     className="block mx-auto my-4 max-w-lg w-full lg:flex no-underline"
   >
-    <div className="h-48 lg:h-72 lg:w-96 flex-none bg-cover bg-center text-center overflow-hidden">
+    <div className="relative h-48 lg:h-72 lg:w-96 flex-none bg-cover bg-center text-center overflow-hidden">
       <Img
         fluid={post.frontmatter.cover_image.childImageSharp.fluid}
-        outerWrapperClassName="h-full"
         className="h-72 w-full gatsby-bg-image"
       />
     </div>
